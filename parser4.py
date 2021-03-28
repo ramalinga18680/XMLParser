@@ -15,6 +15,9 @@ class TestCase():
         self.ignition_failure = False
         self.verify_audio_failure = False
 
+    #def __del__(self):
+
+
     def find_test_caseid(self):
         elem_test_case_id = self.ts_case_element.find("./testCaseID")
         return elem_test_case_id.text
@@ -94,4 +97,4 @@ if __name__ == '__main__':
             print("Audio verification failed")
 
         # list_func_units = ts_case.xpath('./functionUnit[functionUnitName[contains(text(),"Ignition")]]')
-        ts_case_obj = None
+        del ts_case_obj
